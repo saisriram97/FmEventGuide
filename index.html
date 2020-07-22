@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+
+
+header {
+  background: url('https://answers.ea.com/t5/image/serverpage/image-id/105511i647D8F158BD37071/image-size/original?v=1.0&px=-1');
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 35% 35% / 30%;
+}
+header .overlay{
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
+  
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 25px;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333;
+   border-radius:  5% 5% 5% 5% / 2%;
+  background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
+  
+}
+
+h1 {
+  
+  font-size: 80px;
+    font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+      .button {
+  /*background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+    .button5 {
+      background-color: white;
+      color: black;
+      border: 2px solid #555555;
+    }
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+    .button5:hover {
+      background-color: #555555;
+      color: white;
+    }
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+.cardsyt {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card{
+  background: black;
+  color:white;
+}
+
+.container {
+  padding: 0px 0px;
+ 
+}
+.cardown {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 50px;
+  color: #333;
+  background: #fff;
+  margin-bottom: 10px;
+  width: 80%;
+
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+
+.cardown2 {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 50px;
+  color: #333;
+  align-content: center;
+  background: #fff;
+  margin-bottom: 10px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+.cardownbutton {
+  border: none;
+  outline: none;
+  padding: 13px;
+  border-radius: 50px;
+  align-content: center;
+  margin-bottom: 10px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 3px 20px 0 #0000003b;
+  text-decoration:none;
+  color:white;
+  font-size: 18px;
+}
+
+
+
+.cardownyt {
+  border: none;
+  outline: none;
+  padding: 0px;
+  border-radius: 20px;
+  color: #333;
+  background: #fff;
+  margin-bottom: 10px;
+  width: 80%;
+  align-content:  center;
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+
+.button2 {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #333;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 5px;
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+.headerimg {
+  float: left;
+  float: top;
+  width: 75px;
+  height: 75px;
+}
+.footerWrap {
+    width:100%;
+  
+
+    bottom: 0px;
+}
+
+.footer {
+    width:200px;
+    margin:auto;
+}
+.footerContent {
+    float:left;
+    width:100%;
+    background-color:#555;
+    padding:20px 0;
+}
+.footer p {float:left; width:100%; text-align:center; }
+
+    </style>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+<body>
+
+
+<header>
+  <img class="headerimg" src="srwhite.png">
+  <div class="overlay">
+    
+<h1 style="font-size: 65px;">Event Guide</h1>
+  <br>
+
+    </div>
+</header>
+
+<div align="center" style="color:white;font-family: 'Poppins', sans-serif; font-size: 18px; padding: 2px;">
+
+<p style="color:black;"> How many coin packs do you want to purchase?? (there are total 21 coins packs with 7 coin packs per week, where each pack gives 9 stamina)</p>
+
+<input  class="button2" id="cp" type="number" > 
+<input class="button2" type="submit" onclick="myFunction()">
+<!-- class="w3-white w3-panel w3-round-xlarge" -->
+
+  <p class="cardown" id="demo"></p>
+  <p class="cardown" id="demo1"></p>
+  <p class="cardown" id="demo2"></p>
+  <p class="cardown" id="demo3"></p>
+  <p class="cardown" id="demo4"></p>
+  <p class="cardown" id="demo5"></p>
+  <p class="cardown" id="demo6"></p>
+
+</div>
+<div class="bg">
+  <h2 style="text-align: center;text-decoration: underline;">INDIVIDUAL PLAYERS COST</h2>
+<div class="cards" style="padding: 15px" >
+<div align="center">
+    <img class="cardown" src="104.png">
+    <h3 class = "cardown2">24,100</h3>
+  </div>
+
+    <div align="center">
+    <img class="cardown" src="103.png">
+    <h3 class = "cardown2">16,850</h3>
+  </div>
+    <div align="center">
+    <img class="cardown" src="102.png">
+    <h3 class = "cardown2">13,600</h3>
+  </div>
+  <div align="center">
+    <img class="cardown" src="101.png">
+    <h3 class = "cardown2">11,100</h3>
+  </div>
+   <div align="center">
+    <img class="cardown" src="99.png">
+    <h3 class = "cardown2">8,350</h3>
+  </div>
+    <div align="center">
+    <img class="cardown" src="97.png">
+    <h3 class = "cardown2">6,800</h3>
+  </div>
+  <div align="center">
+    <img class="cardown" src="95.png">
+    <h3 class = "cardown2">5,000</h3>
+  </div>
+   <div align="center">
+    <img class="cardown" src="94.png">
+    <h3 class = "cardown2">4,000</h3>
+  </div>
+   <div align="center">
+    <img class="cardown" src="93.png">
+    <h3 class = "cardown2">3,300</h3>
+  </div>
+   <div align="center">
+    <img class="cardown" src="92.png">
+    <h3 class = "cardown2">2,500</h3>
+  </div>
+   <div align="center">
+    <img class="cardown" src="91.png">
+    <h3 class = "cardown2">1,350</h3>
+  </div>
+  <div align="center">
+    <img class="cardown" src="90.png">
+    <h3 class = "cardown2">1,150</h3>
+  </div>
+ 
+ 
+ </div>
+ </div>
+ <div style="background-color: white;">
+  <div  class="cardsyt"> 
+ 
+<p align="center"><iframe class="cardownyt" width="560" height="315" src="https://www.youtube.com/embed/TbeEAApfTlg" ></iframe></p>
+<p align="center"><iframe class="cardownyt" width="560" height="315" src="https://www.youtube.com/embed/h19agc0U8jo" ></iframe></p>
+
+</div>
+  </div>
+
+
+
+  <div class="footerWrap" style="padding:20px;background-color: #555">
+      <div class="footer">
+  <a style="background-color: #ff0a00;color: white;" href="https://www.youtube.com/c/SaiSriRam" target="_blank" class="cardownbutton">Youtube</a>
+  <a style="background-color: #1da0f2;color: white;align-items:center;" href="https://twitter.com/saisriramn" target="_blank" class="cardownbutton">Twitter</a>
+</div>     
+</div>
+
+
+
+
+
+
+<script>
+  //parent.document.getElementsByTagName('iframe')[0].scrolling="no";
+  function codeAddress() {
+         //   alert('ok');
+           document.getElementById("demo").innerHTML = "Time Now";
+  document.getElementById("demo1").innerHTML = "Event End Time";
+  document.getElementById("demo2").innerHTML = "Hourly Stamin Left";
+  document.getElementById("demo3").innerHTML = "Mining Token";
+  document.getElementById("demo4").innerHTML = "Gold Points";
+  document.getElementById("demo5").innerHTML = "Remaining Gold Points";
+  document.getElementById("demo6").innerHTML = "Total";
+
+        }
+        window.onload = codeAddress;
+function myFunction() {
+ if(document.getElementById("cp").value <0 || document.getElementById("cp").value > 21){
+  document.getElementById("demo").innerHTML = "Please enter a positive number less than 22";
+  document.getElementById("demo1").innerHTML = "";
+  document.getElementById("demo2").innerHTML = "";
+  document.getElementById("demo3").innerHTML = "";
+  document.getElementById("demo4").innerHTML = "";
+  document.getElementById("demo5").innerHTML = "";
+  document.getElementById("demo6").innerHTML = "";
+
+ }else{
+  var stamina = (document.getElementById("cp").value)*9;
+  var d = new Date();
+  d.setUTCDate(6)
+  d.setUTCFullYear(2020)
+  d.setUTCHours(19)
+  d.setUTCMilliseconds(0)
+  d.setUTCMinutes(0)
+  d.setUTCMonth(7)
+  d.setUTCSeconds(0)
+  var d3 = d.toUTCString();
+
+  document.getElementById("demo1").innerHTML = "Time Ending: ".bold()+ d3;
+  var d1 = new Date();
+
+  var d4 = d1.toUTCString();
+  document.getElementById("demo").innerHTML = "Event End Time: ".bold()+d4;
+
+  var diff = d.valueOf() - d1.valueOf();
+  var diffInHours = (diff/1000/60/60);
+  var abshours = Math.floor(diffInHours);
+  var ads = Math.floor(diffInHours/24)*9;
+  document.getElementById("demo2").innerHTML = "Hourly Stamina Left: ".bold() + (abshours - 1) + ", Stamina by watching Ads: ".bold()+ads;
+
+  
+
+  abshours = abshours + stamina + ads;
+
+  var minToken = (Math.floor(abshours/3)*10)+30;
+  document.getElementById("demo3").innerHTML = "Mining Token: ".bold() + minToken+" (30 from matches)" ;
+
+  var gold = (Math.floor(minToken/45)*150);
+  var golddiff = (minToken % 45)/5;
+  document.getElementById("demo4").innerHTML = "Gold Points: ".bold()+ (gold +450)+ "(450 from matches), Gold Mines remaining: ".bold() + golddiff;
+
+  var remaining = getleastSum(golddiff);
+  var remaining2 = getmostSum(golddiff);
+  document.getElementById("demo5").innerHTML = "With Remaining Gold Mines left you can get least: ".bold() + remaining + " most: ".bold() + remaining2;
+  document.getElementById("demo6").innerHTML = "A Total of ".bold() + (gold+ remaining+450) + " - ".bold() + (gold +remaining2+450)+" can be claimed from now";
+}
+
+}
+
+function getleastSum(golddiff){
+  var arr = [10,10,10,10,10,10,20,20,50];
+  var sum = 0;
+  for(var i=0;i<golddiff;i++){
+    sum = sum+arr[i];
+  }
+  return sum;
+}
+
+function getmostSum(golddiff){
+  var arr = [50,20,20,10,10,10,10,10,10];
+  var sum = 0;
+  for(var i=0;i<golddiff;i++){
+    sum = sum+arr[i];
+  }
+  return sum;
+}
+</script>
+
+</body>
+</html>
