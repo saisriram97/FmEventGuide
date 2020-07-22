@@ -240,6 +240,11 @@ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     <h3 class = "cardown2">24,100</h3>
   </div>
 
+  <div align="center">
+    <img class="cardown" src="98.png">
+    <h3 class = "cardown2">9,900</h3>
+  </div>
+
     <div align="center">
     <img class="cardown" src="103.png">
     <h3 class = "cardown2">16,850</h3>
@@ -371,14 +376,14 @@ function myFunction() {
 
   var gold = (Math.floor(minToken/45)*150);
   var golddiff = (minToken % 45)/5;
-  document.getElementById("demo4").innerHTML = "Gold Points: ".bold()+ (gold +450)+ "(450 from matches), Gold Mines remaining: ".bold() + golddiff;
+  document.getElementById("demo4").innerHTML = "Gold Points: ".bold()+ (gold + 450 + 1000)+ "(450 from matches,1000 from Hidden Path)" +", Gold Mines remaining: ".bold() + golddiff;
 
   var remaining = getleastSum(golddiff);
   var remaining2 = getmostSum(golddiff);
   document.getElementById("demo5").innerHTML = "With Remaining Gold Mines left you can get least: ".bold() + remaining + " most: ".bold() + remaining2;
-  document.getElementById("demo6").innerHTML = "A Total of ".bold() + (gold+ remaining+450) + " - ".bold() + (gold +remaining2+450)+" can be claimed from now";
-  var gld1=(gold+ remaining+450);
-  var gld2 = (gold +remaining2+450);
+  document.getElementById("demo6").innerHTML = "A Total of ".bold() + (gold+ remaining+450+1000) + " - ".bold() + (gold +remaining2+450+1000)+" can be claimed from now";
+  var gld1=(gold+ remaining+450+1000);
+  var gld2 = (gold +remaining2+450+1000);
   document.getElementById("mypts").style.display = "block";
   document.getElementById("ptsname").style.display = "block";
   document.getElementById("outpts").style.display = "block";
