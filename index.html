@@ -229,7 +229,8 @@ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   <p class="cardown" id="demo4"></p>
   <p class="cardown" id="demo5"></p>
   <p class="cardown" id="demo6"></p>
-
+<div id="ptsname" style="color:black;display:none;">Enter Your points:</div><input  class="button2" style="display:none;"id="mypts" type="number" > 
+<p class="cardown" style="display:none;"id="outpts"></p>
 </div>
 <div class="bg">
   <h2 style="text-align: center;text-decoration: underline;">INDIVIDUAL PLAYERS COST</h2>
@@ -312,8 +313,11 @@ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
 <script>
   //parent.document.getElementsByTagName('iframe')[0].scrolling="no";
+  window.onload = codeAddress;
   function codeAddress() {
          //   alert('ok');
+
+
            document.getElementById("demo").innerHTML = "Time Now";
   document.getElementById("demo1").innerHTML = "Event End Time";
   document.getElementById("demo2").innerHTML = "Hourly Stamin Left";
@@ -323,7 +327,7 @@ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   document.getElementById("demo6").innerHTML = "Total";
 
         }
-        window.onload = codeAddress;
+        
 function myFunction() {
  if(document.getElementById("cp").value <0 || document.getElementById("cp").value > 21){
   document.getElementById("demo").innerHTML = "Please enter a positive number less than 22";
@@ -346,11 +350,11 @@ function myFunction() {
   d.setUTCSeconds(0)
   var d3 = d.toUTCString();
 
-  document.getElementById("demo1").innerHTML = "Time Ending: ".bold()+ d3;
+  document.getElementById("demo1").innerHTML = "Event End Time: ".bold()+ d3;
   var d1 = new Date();
 
   var d4 = d1.toUTCString();
-  document.getElementById("demo").innerHTML = "Event End Time: ".bold()+d4;
+  document.getElementById("demo").innerHTML = "Time Now: ".bold()+d4;
 
   var diff = d.valueOf() - d1.valueOf();
   var diffInHours = (diff/1000/60/60);
@@ -373,6 +377,25 @@ function myFunction() {
   var remaining2 = getmostSum(golddiff);
   document.getElementById("demo5").innerHTML = "With Remaining Gold Mines left you can get least: ".bold() + remaining + " most: ".bold() + remaining2;
   document.getElementById("demo6").innerHTML = "A Total of ".bold() + (gold+ remaining+450) + " - ".bold() + (gold +remaining2+450)+" can be claimed from now";
+  var gld1=(gold+ remaining+450);
+  var gld2 = (gold +remaining2+450);
+  document.getElementById("mypts").style.display = "block";
+  document.getElementById("ptsname").style.display = "block";
+  document.getElementById("outpts").style.display = "block";
+  document.getElementById("outpts").innerHTML = "Your Points as of now:";
+  const source = document.getElementById('mypts');
+const result = document.getElementById('outpts');
+
+const inputHandler = function(e) {
+  var result1 = parseInt(e.target.value) + parseInt(gld1);
+  var result2 = parseInt(e.target.value) + parseInt(gld2);
+
+  result.innerHTML = "Total point: "+result1+" - "+result2;
+}
+
+source.addEventListener('input', inputHandler);
+source.addEventListener('propertychange', inputHandler);
+
 }
 
 }
