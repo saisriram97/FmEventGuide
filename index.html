@@ -371,19 +371,19 @@ function myFunction() {
 
   abshours = abshours + stamina + ads;
 
-  var minToken = (Math.floor(abshours/3)*10)+30;
-  document.getElementById("demo3").innerHTML = "Mining Token: ".bold() + minToken+" (30 from matches)" ;
+  var minToken = (Math.floor(abshours/3)*10)+20;
+  document.getElementById("demo3").innerHTML = "Mining Token: ".bold() + minToken+" (20 from matches)" ;
 
   var gold = (Math.floor(minToken/45)*150);
   var golddiff = (minToken % 45)/5;
-  document.getElementById("demo4").innerHTML = "Gold Points: ".bold()+ (gold + 450 + 1000)+ "(450 from matches,1000 from Hidden Path)" +", Gold Mines remaining: ".bold() + golddiff;
+  document.getElementById("demo4").innerHTML = "Gold Points: ".bold()+ (gold + 300 + 1000)+ "(300 from matches,1000 from Hidden Path)" +", Gold Mines remaining: ".bold() + golddiff;
 
   var remaining = getleastSum(golddiff);
   var remaining2 = getmostSum(golddiff);
   document.getElementById("demo5").innerHTML = "With Remaining Gold Mines left you can get least: ".bold() + remaining + " most: ".bold() + remaining2;
-  document.getElementById("demo6").innerHTML = "A Total of ".bold() + (gold+ remaining+450+1000) + " - ".bold() + (gold +remaining2+450+1000)+" can be claimed from now";
-  var gld1=(gold+ remaining+450+1000);
-  var gld2 = (gold +remaining2+450+1000);
+  document.getElementById("demo6").innerHTML = "A Total of ".bold() + (gold+ remaining+300+1000) + " - ".bold() + (gold +remaining2+300+1000)+" can be claimed from now";
+  var gld1=(gold+ remaining+300+1000);
+  var gld2 = (gold +remaining2+300+1000);
   document.getElementById("mypts").style.display = "block";
   document.getElementById("ptsname").style.display = "block";
   document.getElementById("outpts").style.display = "block";
